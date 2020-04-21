@@ -24,7 +24,7 @@ fn compute(n: u64) -> f64 {
 #[get("/work/{n}")]
 async fn index(info: web::Path<u64>) -> impl Responder {
     let n: u64 = info.into_inner();
-    println!("Received work: {}", n);
+    //println!("Received work: {}", n);
     format!("{}", compute(n))
 }
 
