@@ -32,7 +32,7 @@ async fn index(info: web::Path<u64>) -> impl Responder {
 async fn main() -> std::io::Result<()> {
     println!("Listening on :8080");
     HttpServer::new(|| App::new().service(index))
-        .bind("localhost:8080")?
+        .bind("0.0.0.0:8080")?
         .run()
         .await
 }
